@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Linkforce | Exciting Opportunities</title>
+    <style>
+        body{font-family:Arial,sans-serif;max-width:600px;margin:20px auto;padding:20px;}
+        .job-listing{background-color:white;border-radius:12px;box-shadow:0 4px 8px rgba(0,0,0,0.1);overflow:hidden;border:3px solid #0066cc;}
+        .job-header{background:#0066cc;color:white;padding:15px;text-align:center;position:relative;display:flex;align-items:center;justify-content:space-between;}
+        .logo-placeholder{width:80px;height:80px;background-color:white;border-radius:50%;display:flex;justify-content:center;align-items:center;font-weight:bold;color:#0066cc;font-size:24px;}
+        .job-title{flex-grow:1;text-align:left;margin-left:15px;}
+        .job-title h1{margin:0 0 3px 0;font-size:22px;}
+        .job-title p{margin:0;font-size:16px;}
+        .content{padding:15px 15px 5px;position:relative;overflow:hidden;min-height:150px;}
+        .teaser-section{display:none;animation:fadeEffect 0.3s;}
+        .teaser-section.active{display:block;}
+        .teaser-section h3{margin-top:0;margin-bottom:12px;font-size:20px;color:#0066cc;}
+        .teaser-section ul{margin:0;padding-left:20px;}
+        .teaser-section li{margin-bottom:8px;font-size:16px;}
+        .nav-container{display:flex;align-items:center;justify-content:center;padding:2px 0;}
+        .nav-dots{text-align:center;margin:0 10px;}
+        .dot{height:10px;width:10px;background-color:#bbb;border-radius:50%;display:inline-block;margin:0 5px;cursor:pointer;}
+        .dot.active{background-color:#0066cc;}
+        .arrow{background-color:transparent;color:#0066cc;padding:2px 8px;cursor:pointer;user-select:none;border:none;font-size:24px;font-weight:bold;}
+        .apply-button{display:block;width:100%;padding:12px;background-color:#808080;color:white;text-align:center;text-decoration:none;font-weight:bold;border:none;cursor:pointer;font-size:18px;transition: background-color 0.3s;}
+        .apply-button:hover{background-color:#666666;}
+        .full-ad-toggle{display:flex;align-items:center;justify-content:flex-end;padding:3px 15px;background-color:#f0f8ff;}
+        .full-ad-toggle label{margin-left:5px;font-size:14px;}
+        .full-job-ad{display:none;padding:15px;background-color:#f0f8ff;border-top:1px solid #0066cc;}
+        .full-job-ad h3, .full-job-ad h4{color:#0066cc;}
+        .full-job-ad ul{padding-left:20px;}
+        .full-job-ad li{margin-bottom:8px;}
+        @keyframes fadeEffect {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+    </style>
+</head>
+<body>
+    <div class="job-listing">
+        <div class="job-header">
+            <div class="logo-placeholder">LF</div>
+            <div class="job-title">
+                <h1>Join Linkforce</h1>
+                <p>Various Exciting Roles</p>
+            </div>
+        </div>
+        <div class="full-ad-toggle">
+            <input type="checkbox" id="fullAdToggle" onclick="toggleFullAd()">
+            <label for="fullAdToggle">Show Full Job Ad</label>
+        </div>
+        <div id="jobTeaser" class="content">
+            <div class="teaser-section active" id="section1">
+                <h3>Why Linkforce? 🌟</h3>
+                <ul>
+                    <li>🤝 Unique culture of mateship</li>
+                    <li>🚀 Diverse career growth opportunities</li>
+                    <li>💼 People-centric business values</li>
+                </ul>
+            </div>
+            <div class="teaser-section" id="section2">
+                <h3>What We Do 🛠️</h3>
+                <ul>
+                    <li>🔧 Maintenance shutdown services</li>
+                    <li>🏗️ Project delivery across industries</li>
+                    <li>🌎 Operations in Pilbara and Goldfields</li>
+                </ul>
+            </div>
+            <div class="teaser-section" id="section3">
+                <h3>Join Us For 🎉</h3>
+                <ul>
+                    <li>💪 Challenging and rewarding work</li>
+                    <li>🌱 Continuous learning and development</li>
+                    <li>🏅 Recognition of your achievements</li>
+                </ul>
+            </div>
+        </div>
+        <div class="nav-container">
+            <button class="arrow" onclick="changeSection(-1)">&#10094;</button>
+            <div class="nav-dots">
+                <span class="dot active" onclick="showSection(1)"></span>
+                <span class="dot" onclick="showSection(2)"></span>
+                <span class="dot" onclick="showSection(3)"></span>
+            </div>
+            <button class="arrow" onclick="changeSection(1)">&#10095;</button>
+        </div>
+        <div id="fullJobAd" class="full-job-ad">
+            <h3>Full Job Description</h3>
+            <p>Linkforce is a leading integrated maintenance, engineering, and project services delivery business. Founded in 2007, we've grown from a small crew of shutdown specialists to an operational workforce of over 2,800 personnel nationwide.</p>
+            
+            <h4>About Our Roles:</h4>
+            <p>We're currently seeking talented individuals for various positions, including but not limited to:</p>
+            <ul>
+                <li>Mechanical Fitters</li>
+                <li>Boilermakers</li>
+                <li>Electricians</li>
+                <li>Riggers</li>
+                <li>Scaffolders</li>
+                <li>Project Managers</li>
+            </ul>
+
+            <h4>What We Offer:</h4>
+            <ul>
+                <li>Competitive salary packages with attractive hourly rates</li>
+                <li>Opportunities for career advancement and skill development</li>
+                <li>Work on exciting projects across Western Australia's Pilbara and Goldfields regions</li>
+                <li>A supportive and collaborative work environment that values mateship</li>
+                <li>Ongoing training and professional development opportunities</li>
+                <li>FIFO (Fly-In, Fly-Out) and residential opportunities available</li>
+            </ul>
+
+            <h4>Key Requirements:</h4>
+            <ul>
+                <li>Relevant trade qualifications or certifications for technical roles</li>
+                <li>Experience in the mining, industrial, or energy sectors (preferred but not always essential)</li>
+                <li>Strong commitment to safety and quality</li>
+                <li>Excellent communication and teamwork skills</li>
+                <li>Flexibility to work in various locations and on different projects</li>
+            </ul>
+
+            <p>If you're passionate about making a difference and want to be part of a dynamic team that's shaping the future of Australia's resource sector, we want to hear from you!</p>
+        </div>
+        <a href="https://careers.linkforce.com.au/#/jobs/1197" class="apply-button" target="_blank">Apply Now</a>
+    </div>
+
+    <script>
+        let currentSection = 1;
+        let autoPlayInterval;
+
+        function showSection(n) {
+            let sections = document.getElementsByClassName("teaser-section");
+            let dots = document.getElementsByClassName("dot");
+            
+            if (n > sections.length) {currentSection = 1}
+            if (n < 1) {currentSection = sections.length}
+            
+            for (let i = 0; i < sections.length; i++) {
+                sections[i].classList.remove("active");
+            }
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].classList.remove("active");
+            }
+            
+            sections[currentSection-1].classList.add("active");
+            dots[currentSection-1].classList.add("active");
+        }
+
+        function changeSection(n) {
+            showSection(currentSection += n);
+            resetAutoPlay();
+        }
+
+        function toggleFullAd() {
+            const jobTeaser = document.getElementById('jobTeaser');
+            const fullJobAd = document.getElementById('fullJobAd');
+            const navContainer = document.querySelector('.nav-container');
+            const isChecked = document.getElementById('fullAdToggle').checked;
+            
+            if (isChecked) {
+                jobTeaser.style.display = 'none';
+                fullJobAd.style.display = 'block';
+                navContainer.style.display = 'none';
+                stopAutoPlay();
+            } else {
+                jobTeaser.style.display = 'block';
+                fullJobAd.style.display = 'none';
+                navContainer.style.display = 'flex';
+                startAutoPlay();
+            }
+        }
+
+        function startAutoPlay() {
+            autoPlayInterval = setInterval(() => {
+                changeSection(1);
+            }, 3000); // Change section every 3 seconds
+        }
+
+        function stopAutoPlay() {
+            clearInterval(autoPlayInterval);
+        }
+
+        function resetAutoPlay() {
+            stopAutoPlay();
+            startAutoPlay();
+        }
+
+        // Start auto-play when the page loads
+        window.onload = startAutoPlay;
+    </script>
+</body>
+</html>
